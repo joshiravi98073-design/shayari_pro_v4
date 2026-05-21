@@ -1,0 +1,16 @@
+# Protect sensitive files from direct browser access
+<Files ".env.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Enable PHP UTF-8
+AddDefaultCharset UTF-8
+
+# Prevent directory listing
+Options -Indexes
